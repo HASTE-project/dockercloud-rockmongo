@@ -19,6 +19,6 @@ EXPOSE 80
 
 # Simple startup script to avoid some issues observed with container restart
 ADD run-httpd.sh /usr/bin/run-httpd.sh
-ADD config.php /usr/bin/config.php
+ADD config.php /var/www/html/config.php
 
 CMD ["/usr/bin/run-httpd.sh"]
