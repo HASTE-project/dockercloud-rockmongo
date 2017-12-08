@@ -36,6 +36,8 @@ $MONGO["features"]["plugins"] = "on";//plugins
 //    ]
 //];
 
+
+// NOTE! This is not gitcrypted !!!
 $MONGO["servers"] = [
 	[
 		"mongo_name" => "Metadata DB Server",
