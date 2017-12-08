@@ -25,3 +25,21 @@ The Original Rockmongo repository: https://github.com/iwind/rockmongo
 
 ![alt tag](https://github.com/cosmostail/dockercloud-rockmongo/blob/master/images/step1.png)
 ![alt tag](https://github.com/cosmostail/dockercloud-rockmongo/blob/master/images/step2.png)
+
+
+
+** Notes on Fork **
+
+- The mechanism for auto-generating the config.php is buggy, with regards boolean variables, as they are written inside quotes.
+- In this fork, that mechanism is disabled, and the config file is added directly instead as a workaround.
+
+To build:
+`$ sudo docker build -t benblamey/rockmongo .`
+
+To run:
+`$ sudo docker run -d -p 80:80 benblamey/rockmongo`
+
+To run on startup:
+`$crontab -e`
+And add:
+`@reboot docker run -d -p 80:80 benblamey/rockmongo`
